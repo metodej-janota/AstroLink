@@ -1,11 +1,13 @@
 //IMPORT COMPONENTS
-import Navigation from "./components/Navigation";
+import SideBar from "./components/SideBar";
 
 //APP
 function App() {
   return (
     <div className="App">
-      <Navigation />
+      <section>
+        <SideBar />
+      </section>
     </div>
   );
 }
