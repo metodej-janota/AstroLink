@@ -1,6 +1,6 @@
 # Chatovací síť
 
-Chatovací síť je moderní webová aplikace, která umožňuje uživatelům komunikovat a navazovat spojení online. Aplikace je postavena na technologiích Bootstrap, Socket.IO, Node.js, JavaScript a React.
+Chatovací síť a moderní webová aplikace, která umožňuje uživatelům komunikovat a navazovat spojení online. Aplikace je postavena na technologiích Bootstrap, Socket.IO, Node.js, JavaScript a React.
 
 ## Instalace a spuštění
 
