@@ -1,7 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import { useState } from "react";
 
 function SideBar() {
+  let items = ["První", "Druhý", "Třetí", "Čtvrtý"];
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+
   return (
     <div
       className="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary"
@@ -15,31 +18,23 @@ function SideBar() {
       </a>
       <hr></hr>
       <ul className="nav nav-pills flex-column mb-auto">
-        <li className="nav-item">
-          <a href="#" className="nav-link active" aria-current="page">
-            Home
+        {items.length === 0 && <p>Žádné položky</p>}
+        {items.map((item, index) => (
+          <a
+            href="#"
+            className={
+              selectedIndex === index
+                ? "nav-link active"
+                : "nav-link link-body-emphasis"
+            }
+            key={item}
+            onClick={() => {
+              setSelectedIndex(index);
+            }}
+          >
+            {item}
           </a>
-        </li>
-        <li>
-          <a href="#" className="nav-link link-body-emphasis">
-            Dashboard
-          </a>
-        </li>
-        <li>
-          <a href="#" className="nav-link link-body-emphasis">
-            Orders
-          </a>
-        </li>
-        <li>
-          <a href="#" className="nav-link link-body-emphasis">
-            Products
-          </a>
-        </li>
-        <li>
-          <a href="#" className="nav-link link-body-emphasis">
-            Customers
-          </a>
-        </li>
+        ))}
       </ul>
       <hr></hr>
       <div className="dropdown">
@@ -56,7 +51,7 @@ function SideBar() {
             height="32"
             className="rounded-circle me-2"
           ></img>
-          <strong>mdo</strong>
+          <strong>Username</strong>
         </a>
         <ul className="dropdown-menu text-small shadow">
           <li>

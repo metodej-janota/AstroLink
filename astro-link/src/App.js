@@ -1,5 +1,5 @@
 //IMPORT COMPONENTS
-import SideBar from "./components/SideBar";
+import SideBar from "./components/SideBarCom/SideBar";
 
 //APP
 function App() {
