@@ -7,7 +7,7 @@ import { Button } from "@nextui-org/react";
 import Sun from "../../../public/icons/sun";
 import Moon from "../../../public/icons/moon";
 
-export function ThemeSwitcher() {
+export default function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 

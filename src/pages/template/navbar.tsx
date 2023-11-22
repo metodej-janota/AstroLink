@@ -7,7 +7,7 @@ import {
   Link,
   Button,
 } from "@nextui-org/react";
-import { ThemeSwitcher } from "../components/themeSwitcher";
+import ThemeSwitcher from "../components/themeSwitcher";
 import Star from "../../../public/icons/star";
 
 export default function navbar() {
