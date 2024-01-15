@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import { SessionProvider } from "next-auth/react";
 import type { AppProps } from "next/app";
-import { ApolloProviderWrapper } from "./components/util/apollo-provider-wrapper";
+import { ApolloProviderWrapper } from "./components/util/apolloProvider";
 import "../styles/globals.css";
 import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
