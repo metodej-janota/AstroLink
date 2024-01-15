@@ -2,7 +2,7 @@ import { useState } from "react";
 import { gql, useMutation } from "@apollo/client";
 import { useSession } from "next-auth/react";
 
-export const NewMessageForm = () => {
+const NewMessageForm = () => {
   const AddNewMessageMutation = gql`
     mutation AddNewMessage($username: String!, $avatar: URL, $body: String!) {
       messageCreate(
@@ -56,3 +56,5 @@ export const NewMessageForm = () => {
     </form>
   );
 };
+
+export default NewMessageForm;

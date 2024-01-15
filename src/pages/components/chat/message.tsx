@@ -14,7 +14,7 @@ interface Props {
   message: Message;
 }
 
-export const Message = ({ message }: Props) => {
+const Message = ({ message }: Props) => {
   const { data: session } = useSession();
 
   return (
@@ -72,3 +72,5 @@ export const Message = ({ message }: Props) => {
     </div>
   );
 };
+
+export default Message;

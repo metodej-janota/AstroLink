@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 import type { Message as IMessage } from "./message";
-import { Message } from "./message";
+import Message from "./message";
 
 const GetRecentMessagesQuery = gql`
   query GetRecentMessages($last: Int) @live {
@@ -22,7 +22,7 @@ const GetRecentMessagesQuery = gql`
   }
 `;
 
-export const MessageList = () => {
+const MessageList = () => {
   const [scrollRef, inView, entry] = useInView({
     trackVisibility: true,
     delay: 1000,
@@ -78,3 +78,5 @@ export const MessageList = () => {
     </div>
   );
 };
+
+export default MessageList;
