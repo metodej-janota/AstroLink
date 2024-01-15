@@ -70,3 +70,5 @@ export const Message = ({ message }: Props) => {
     </div>
   );
 };
+
+export default Message;
