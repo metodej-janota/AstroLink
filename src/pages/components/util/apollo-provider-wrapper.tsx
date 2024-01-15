@@ -8,7 +8,7 @@ import {
   split,
   from,
 } from "@apollo/client";
-import { SSELink, isLiveQuery } from "@grafbase/apollo-link"
+import { SSELink, isLiveQuery } from "@grafbase/apollo-link";
 import { getOperationAST } from "graphql";
 import { setContext } from "@apollo/client/link/context";
 
@@ -51,3 +51,5 @@ export const ApolloProviderWrapper = ({ children }: PropsWithChildren) => {
 
   return <ApolloProvider client={client}>{children}</ApolloProvider>;
 };
+
+export default ApolloProviderWrapper;
