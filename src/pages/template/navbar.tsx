@@ -7,15 +7,13 @@ import {
   Link,
   Button,
 } from "@nextui-org/react";
-import ThemeSwitcher from "../components/themeSwitcher";
-import Star from "../../../public/icons/star";
+import ThemeSwitcher from "../components/util/themeSwitcher";
 
 export default function navbar() {
   return (
     <Navbar>
       <NavbarBrand>
-        <Star />
-        <p className="font-bold text-inherit">AstroLink</p>
+        <p className="font-bold text-inherit">🚀 AstroLink</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
