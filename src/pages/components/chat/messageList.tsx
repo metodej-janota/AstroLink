@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 import type { Message as IMessage } from "./message";
-import Message from "./message";
+import { Message } from "./message";
 
 const GetRecentMessagesQuery = gql`
   query GetRecentMessages($last: Int) @live {
