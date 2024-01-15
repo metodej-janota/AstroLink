@@ -9,6 +9,7 @@ import {
   NavbarItem,
   Link,
   Button,
+  User,
 } from "@nextui-org/react";
 import ThemeSwitcher from "../components/util/themeSwitcher";
 
@@ -45,17 +46,15 @@ export default function NavbarComponent() {
         </NavbarItem>
         <NavbarItem>
           {session ? (
-            <div className="flex space-x-1">
+            <div>
               {session?.user?.image && (
-                <div className="w-12 h-12 rounded overflow-hidden">
-                  <Image
-                    width={50}
-                    height={50}
-                    src={session?.user?.image}
-                    alt={session?.user?.name || "User profile picture"}
-                    title={session?.user?.name || "User profile picture"}
-                  />
-                </div>
+                <User
+                  name={session?.username}
+                  description={session?.user?.email}
+                  avatarProps={{
+                    src: session?.user?.image,
+                  }}
+                />
               )}
               <Button
                 onClick={() => signOut()}
