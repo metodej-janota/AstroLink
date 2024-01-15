@@ -17,6 +17,10 @@ interface Props {
 export const Message = ({ message }: Props) => {
   const { data: session } = useSession();
 
+  if (!session) {
+    return null;
+  }
+
   return (
     <div
       className={`flex flex-col relative space-x-1 space-y-1 ${
@@ -54,7 +58,7 @@ export const Message = ({ message }: Props) => {
               : "bg-[#363739]"
           } `}
         >
-          {message.username !== session?.username && session?.username && (
+          {message.username !== session?.username && (
             <span className="font-bold">{message.username}:&nbsp;</span>
           )}
           <span className="max-w-sm">{message.body}</span>
