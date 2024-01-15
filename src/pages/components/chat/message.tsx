@@ -17,15 +17,17 @@ interface Props {
 export const Message = ({ message }: Props) => {
   const { data: session } = useSession();
 
+  const username = session?.username || ""; // Add null check for session.username
+
   return (
     <div
       className={`flex flex-col relative space-x-1 space-y-1 ${
-        message.username === session?.username ? "text-right" : "text-left"
+        message.username === username ? "text-right" : "text-left"
       }`}
     >
       <div
         className={`flex relative space-x-1 ${
-          message.username === session?.username
+          message.username === username
             ? "flex-row-reverse space-x-reverse"
             : "flex-row"
         }`}
@@ -49,12 +51,10 @@ export const Message = ({ message }: Props) => {
         )}
         <span
           className={`inline-flex rounded space-x-2 items-start p-3 text-white ${
-            message.username === session?.username
-              ? "bg-[#4a9c6d]"
-              : "bg-[#363739]"
+            message.username === username ? "bg-[#4a9c6d]" : "bg-[#363739]"
           } `}
         >
-          {message.username !== session?.username && (
+          {message.username !== username && (
             <span className="font-bold">{message.username}:&nbsp;</span>
           )}
           <span className="max-w-sm">{message.body}</span>
