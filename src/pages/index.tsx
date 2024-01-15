@@ -1,6 +1,6 @@
-import { Header } from "./components/sections/header";
-import { MessageList } from "./components/chat/messageList";
-import { NewMessageForm } from "./components/chat/messageForm";
+import Header from "./components/sections/header";
+import MessageList from "./components/chat/messageList";
+import NewMessageForm from "./components/chat/messageForm";
 import { useSession } from "next-auth/react";
 
 export default function Home() {
