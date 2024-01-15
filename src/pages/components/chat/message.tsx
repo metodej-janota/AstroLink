@@ -54,7 +54,7 @@ export const Message = ({ message }: Props) => {
               : "bg-[#363739]"
           } `}
         >
-          {message.username !== session?.username && (
+          {message.username !== session?.username && session?.username && (
             <span className="font-bold">{message.username}:&nbsp;</span>
           )}
           <span className="max-w-sm">{message.body}</span>
