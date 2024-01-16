@@ -47,6 +47,13 @@ export default function NavbarComponent() {
         <NavbarItem>
           {session ? (
             <div>
+              <Button
+                onClick={() => signOut()}
+                color="primary"
+                endContent={<LogOut />}
+              >
+                Odhlásit se
+              </Button>
               {session?.user?.image && (
                 <User
                   name={session?.username}
@@ -56,13 +63,6 @@ export default function NavbarComponent() {
                   }}
                 />
               )}
-              <Button
-                onClick={() => signOut()}
-                color="primary"
-                endContent={<LogOut />}
-              >
-                Odhlásit se
-              </Button>
             </div>
           ) : (
             <Button
