@@ -23,15 +23,5 @@ export default function ThemeSwitcher() {
     }
   }
 
-  return (
-    <Button
-      isIconOnly
-      color="primary"
-      aria-label="Theme switch"
-      variant="flat"
-      onClick={themeSwitch}
-    >
-      {theme == "dark" ? <Moon /> : <Sun />}
-    </Button>
-  );
+  return <p onClick={themeSwitch} className="flex gap-1">{theme == "dark" ? <Moon /> : <Sun />}Theme</p>;
 }
